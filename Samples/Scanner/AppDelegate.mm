@@ -5,7 +5,7 @@
 */
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MainViewController.h"
 
 //------------------------------------------------------------------------------
 
@@ -59,12 +59,12 @@ void preventApplicationFromStartingInTheBackgroundWhenTheStructureSensorIsPlugge
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+    //if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    //    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    //} else {
+    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    //}
+    self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
     
     return YES;
