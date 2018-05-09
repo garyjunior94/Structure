@@ -11,7 +11,9 @@
 #import <Structure/Structure.h>
 
 @interface MainViewController : UIViewController <STBackgroundTaskDelegate, UIPopoverControllerDelegate, UIGestureRecognizerDelegate>
-{    
-}
+
+@property (retain, nonatomic) IBOutlet UILabel *titleLabel;
+@property (retain, nonatomic) IBOutlet UILabel *btnPressedLabel;
+- (IBAction)btnPressed:(id)sender;
 
 @end

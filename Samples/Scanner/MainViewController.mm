@@ -45,4 +45,9 @@
     [super didReceiveMemoryWarning];
 }
 
+
+- (IBAction)btnPressed:(id)sender {
+    _btnPressedLabel.hidden = !_btnPressedLabel.hidden;
+}
+
 @end
