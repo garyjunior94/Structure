@@ -39,7 +39,10 @@ void preventApplicationFromStartingInTheBackgroundWhenTheStructureSensorIsPlugge
 
 //------------------------------------------------------------------------------
 
+
 @implementation AppDelegate
+
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -65,6 +68,10 @@ void preventApplicationFromStartingInTheBackgroundWhenTheStructureSensorIsPlugge
     self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     //}
     self.window.rootViewController = self.mainViewController;
+    
+    navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    [self.window addSubview:[navigationController view]];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

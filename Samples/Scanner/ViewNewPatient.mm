@@ -1,14 +1,14 @@
 //
-//  MainViewController.m
+//  ViewNewPatient.mm
 //  Scanner
 //
 //  Created by Gary Root on 5/9/18.
 //  Copyright © 2018 Occipital. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "ViewNewPatient.h"
 
-@implementation MainViewController
+@implementation ViewNewPatient
 
 - (void)dealloc
 {
@@ -17,7 +17,7 @@
 - (void)setupUserInterface
 {
     // Make sure the status bar is hidden.
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     
     // Fully transparent message label, initially.
     //self.appStatusMessageLabel.alpha = 0;
@@ -29,8 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.viewNewPatient = [[ViewNewPatient alloc] initWithNibName:@"ViewNewPatient" bundle:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -47,14 +45,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
-- (IBAction)btnPressed:(id)sender {
-    //_btnPressedLabel.hidden = !_btnPressedLabel.hidden;
-    
-    //WORKS
-    //[self presentViewController:self.viewNewPatient animated:YES completion:nil];
-    [self.navigationController pushViewController:self.viewNewPatient animated:YES];
-    
+- (IBAction)optionsSegment:(id)sender {
 }
-
 @end
