@@ -20,4 +20,5 @@
 
 @property (strong, nonatomic) ViewNewPatient *viewNewPatient;
 
+
 @end

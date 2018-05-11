@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 
+
 @implementation MainViewController
 
 - (void)dealloc
@@ -29,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
     self.viewNewPatient = [[ViewNewPatient alloc] initWithNibName:@"ViewNewPatient" bundle:nil];
 }
@@ -36,6 +38,12 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)appDidBecomeActive
@@ -53,6 +61,7 @@
     
     //WORKS
     //[self presentViewController:self.viewNewPatient animated:YES completion:nil];
+    [self.navigationItem setTitle:@"Cancel"];
     [self.navigationController pushViewController:self.viewNewPatient animated:YES];
     
 }
