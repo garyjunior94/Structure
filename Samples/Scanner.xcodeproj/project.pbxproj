@@ -46,6 +46,8 @@
 		5839B60020A53780009D6CEA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5839B5FF20A53780009D6CEA /* libsqlite3.tbd */; };
 		5839B60420A5382F009D6CEA /* DBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5839B60320A5382F009D6CEA /* DBManager.mm */; };
 		5839B60620A546B9009D6CEA /* sampledb.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5839B60520A546B9009D6CEA /* sampledb.sql */; };
+		5880374A20A8B1FF00CA0FC5 /* ViewPrevPatients.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5880374820A8B1FF00CA0FC5 /* ViewPrevPatients.mm */; };
+		5880374B20A8B1FF00CA0FC5 /* ViewPrevPatients.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5880374920A8B1FF00CA0FC5 /* ViewPrevPatients.xib */; };
 		58FFC24720A2D58B00083ADC /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 58FFC24620A2D58B00083ADC /* MainViewController.mm */; };
 		58FFC24C20A2D95300083ADC /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FFC24A20A2D95300083ADC /* MainViewController.xib */; };
 		58FFC24E20A3FD0C00083ADC /* ViewNewPatient.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FFC24D20A3FD0C00083ADC /* ViewNewPatient.xib */; };
@@ -112,6 +114,9 @@
 		5839B60220A5382F009D6CEA /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		5839B60320A5382F009D6CEA /* DBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DBManager.mm; sourceTree = "<group>"; };
 		5839B60520A546B9009D6CEA /* sampledb.sql */ = {isa = PBXFileReference; lastKnownFileType = file; name = sampledb.sql; path = ../../../../../sampledb.sql; sourceTree = "<group>"; };
+		5880374720A8B1FF00CA0FC5 /* ViewPrevPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPrevPatients.h; sourceTree = "<group>"; };
+		5880374820A8B1FF00CA0FC5 /* ViewPrevPatients.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewPrevPatients.mm; sourceTree = "<group>"; };
+		5880374920A8B1FF00CA0FC5 /* ViewPrevPatients.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPrevPatients.xib; sourceTree = "<group>"; };
 		58FFC24520A2D53800083ADC /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		58FFC24620A2D58B00083ADC /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
 		58FFC24B20A2D95300083ADC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
@@ -207,15 +212,14 @@
 		2AFC8D81176F966000F7F3B5 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				5880374620A8B19100CA0FC5 /* PreviousPatients */,
+				5880374520A8AFAA00CA0FC5 /* Welcome */,
+				5880374420A8AF4E00CA0FC5 /* NewPatient */,
 				5839B60120A537C4009D6CEA /* Database */,
-				58FFC24F20A3FD9400083ADC /* ViewNewPatient.h */,
-				58FFC25020A3FD9400083ADC /* ViewNewPatient.mm */,
 				7EAD26B4198C07F600638C9C /* CustomUIKitStyles.h */,
 				7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */,
 				2D1295A5184370FE00E8C685 /* AppDelegate.h */,
 				2D1295A6184370FE00E8C685 /* AppDelegate.mm */,
-				58FFC24520A2D53800083ADC /* MainViewController.h */,
-				58FFC24620A2D58B00083ADC /* MainViewController.mm */,
 				2D1295AB184370FE00E8C685 /* ViewController.h */,
 				2D1295AC184370FE00E8C685 /* ViewController.mm */,
 				2AEF46211A1288B600CAF953 /* ViewController+Camera.h */,
@@ -249,9 +253,7 @@
 			children = (
 				6F03CB601862832600518C22 /* Graphics */,
 				2AB955C1184E573A003DA089 /* MeshView_iPad.xib */,
-				58FFC24A20A2D95300083ADC /* MainViewController.xib */,
 				438C049818723EB10062E958 /* ViewController_iPad.xib */,
-				58FFC24D20A3FD0C00083ADC /* ViewNewPatient.xib */,
 				6F03CB7C1862832600518C22 /* Scanner-Info.plist */,
 				6F03CB571862823000518C22 /* InfoPlist.strings */,
 				6F03CB791862832600518C22 /* main.m */,
@@ -268,6 +270,36 @@
 				5839B60520A546B9009D6CEA /* sampledb.sql */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		5880374420A8AF4E00CA0FC5 /* NewPatient */ = {
+			isa = PBXGroup;
+			children = (
+				58FFC24D20A3FD0C00083ADC /* ViewNewPatient.xib */,
+				58FFC25020A3FD9400083ADC /* ViewNewPatient.mm */,
+				58FFC24F20A3FD9400083ADC /* ViewNewPatient.h */,
+			);
+			path = NewPatient;
+			sourceTree = "<group>";
+		};
+		5880374520A8AFAA00CA0FC5 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				58FFC24A20A2D95300083ADC /* MainViewController.xib */,
+				58FFC24520A2D53800083ADC /* MainViewController.h */,
+				58FFC24620A2D58B00083ADC /* MainViewController.mm */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		5880374620A8B19100CA0FC5 /* PreviousPatients */ = {
+			isa = PBXGroup;
+			children = (
+				5880374720A8B1FF00CA0FC5 /* ViewPrevPatients.h */,
+				5880374820A8B1FF00CA0FC5 /* ViewPrevPatients.mm */,
+				5880374920A8B1FF00CA0FC5 /* ViewPrevPatients.xib */,
+			);
+			path = PreviousPatients;
 			sourceTree = "<group>";
 		};
 		6F03CB601862832600518C22 /* Graphics */ = {
@@ -357,6 +389,7 @@
 				438C049C18723EB10062E958 /* ViewController_iPad.xib in Resources */,
 				58FFC24C20A2D95300083ADC /* MainViewController.xib in Resources */,
 				435307C91872825B00B04481 /* Default@2x.png in Resources */,
+				5880374B20A8B1FF00CA0FC5 /* ViewPrevPatients.xib in Resources */,
 				6F03CB911862832600518C22 /* Splash.png in Resources */,
 				435307C71872825B00B04481 /* Default-568h@2x.png in Resources */,
 			);
@@ -380,6 +413,7 @@
 				2AEF46201A127B4900CAF953 /* ViewController+SLAM.mm in Sources */,
 				58FFC24720A2D58B00083ADC /* MainViewController.mm in Sources */,
 				2AEF461B1A1278D300CAF953 /* ViewController+Sensor.mm in Sources */,
+				5880374A20A8B1FF00CA0FC5 /* ViewPrevPatients.mm in Sources */,
 				2D1295B0184370FE00E8C685 /* ViewController.mm in Sources */,
 				2D4DE5AC199BB90400F69F56 /* CustomShaders.mm in Sources */,
 				6F03CB961862832600518C22 /* main.m in Sources */,

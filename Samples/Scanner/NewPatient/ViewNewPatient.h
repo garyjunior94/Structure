@@ -12,16 +12,13 @@
 #import <Structure/Structure.h>
 
 
-@interface ViewNewPatient : UIViewController <STBackgroundTaskDelegate, UIPopoverControllerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface ViewNewPatient : UIViewController <STBackgroundTaskDelegate, UIPopoverControllerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtLastname;
 @property (weak, nonatomic) IBOutlet UITextField *txtFirstname;
 @property (weak, nonatomic) IBOutlet UITextField *txtAge;
-
-@property (weak, nonatomic) IBOutlet UITableView *tblPeople;
-@property (weak, nonatomic) IBOutlet UITableViewCell *myCell;
 
 - (IBAction)saveInfo:(id)sender;
 

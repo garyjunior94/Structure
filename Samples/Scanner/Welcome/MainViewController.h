@@ -7,6 +7,7 @@
 //
 
 #import "ViewNewPatient.h"
+#import "ViewPrevPatients.h"
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
@@ -16,9 +17,12 @@
 @interface MainViewController : UIViewController <STBackgroundTaskDelegate, UIPopoverControllerDelegate, UIGestureRecognizerDelegate>
 
 @property (retain, nonatomic) IBOutlet UILabel *titleLabel;
-- (IBAction)btnPressed:(id)sender;
+
+- (IBAction)newPatientBtn:(id)sender;
+- (IBAction)prevPatientBtn:(id)sender;
 
 @property (strong, nonatomic) ViewNewPatient *viewNewPatient;
+@property (strong, nonatomic) ViewPrevPatients *viewPrevPatients;
 
 
 @end

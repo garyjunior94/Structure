@@ -1,15 +1,15 @@
 //
-//  ViewNewPatient.mm
+//  ViewPrevPatients.mm
 //  Scanner
 //
 //  Created by Gary Root on 5/9/18.
 //  Copyright © 2018 Occipital. All rights reserved.
 //
 
-#import "ViewNewPatient.h"
+#import "ViewPrevPatients.h"
 #import "DBManager.h"
 
-@interface ViewNewPatient()
+@interface ViewPrevPatients()
 
 @property (nonatomic, strong) DBManager *dbManager;
 @property (nonatomic, strong) NSArray *patientInfo;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation ViewNewPatient
+@implementation ViewPrevPatients
 
 //Private
 -(void)loadData{
@@ -103,19 +103,8 @@
     
     self.dbManager = [[DBManager alloc] initWithDatabaseFilename:@"sampledb.sql"];
     
-    self.txtLastname.delegate = self;
-    self.txtFirstname.delegate = self;
-    self.txtAge.delegate = self;
-    
     self.tblPeople.delegate = self;
     self.tblPeople.dataSource = self;
-    
-    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    // or @"yyyy-MM-dd hh:mm:ss a" if you prefer the time with AM/PM
-    //NSLog(@"%@",[dateFormatter stringFromDate:[NSDate date]]);
-    
-    _dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
     
     [self loadData];
 }
@@ -123,6 +112,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self loadData];
 }
 
 - (void)appDidBecomeActive
@@ -134,25 +124,4 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)saveInfo:(id)sender
-{
-    // Prepare the query string.
-    NSString *query = [NSString stringWithFormat:@"insert into peopleInfo values(null, '%@', '%@', %d)", self.txtFirstname.text, self.txtLastname.text, [self.txtAge.text intValue]];
-    
-    // Execute the query.
-    [self.dbManager executeQuery:query];
-    
-    // If the query was successfully executed then pop the view controller.
-    if (self.dbManager.affectedRows != 0) {
-        NSLog(@"Query was executed successfully. Affected rows = %d", self.dbManager.affectedRows);
-        
-        // Pop the view controller.
-        //[self.navigationController popViewControllerAnimated:YES];
-    }
-    else{
-        NSLog(@"Could not execute the query.");
-    }
-    
-    [self loadData];
-}
 @end

@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewNewPatient">
             <connections>
                 <outlet property="dateLabel" destination="Kcv-KX-t3K" id="j1n-Qz-n2T"/>
-                <outlet property="tblPeople" destination="l4e-6Q-6TN" id="fBV-hb-AaA"/>
                 <outlet property="txtAge" destination="LuS-Ds-rdt" id="cPG-rE-m8w"/>
                 <outlet property="txtFirstname" destination="ie5-p0-tSJ" id="3DT-6W-C8U"/>
                 <outlet property="txtLastname" destination="N3G-Y8-lfd" id="iHK-HF-nOj"/>
@@ -59,15 +58,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-6Q-6TN">
-                    <rect key="frame" x="271" y="173" width="416" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="7DJ-Fp-mbl"/>
-                        <outlet property="delegate" destination="-1" id="gwV-c1-7eV"/>
-                    </connections>
-                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iam-Pb-w1G">
                     <rect key="frame" x="20" y="295" width="73" height="53"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -33,6 +33,8 @@
 
     
     self.viewNewPatient = [[ViewNewPatient alloc] initWithNibName:@"ViewNewPatient" bundle:nil];
+    
+    self.viewPrevPatients = [[ViewPrevPatients alloc] initWithNibName:@"ViewPrevPatients" bundle:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -56,14 +58,20 @@
 }
 
 
-- (IBAction)btnPressed:(id)sender {
+- (IBAction)newPatientBtn:(id)sender
+{
     //_btnPressedLabel.hidden = !_btnPressedLabel.hidden;
     
     //WORKS
     //[self presentViewController:self.viewNewPatient animated:YES completion:nil];
-    [self.navigationItem setTitle:@"Cancel"];
+    [self.navigationItem setTitle:@"Save & Close"];
     [self.navigationController pushViewController:self.viewNewPatient animated:YES];
-    
+}
+
+- (IBAction)prevPatientBtn:(id)sender
+{
+    [self.navigationItem setTitle:@"Back"];
+    [self.navigationController pushViewController:self.viewPrevPatients animated:YES];
 }
 
 @end
