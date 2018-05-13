@@ -6,6 +6,8 @@
 //  Copyright © 2018 Occipital. All rights reserved.
 //
 
+#import "Patient.h"
+#import "ViewController.h"
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
@@ -19,7 +21,24 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtLastname;
 @property (weak, nonatomic) IBOutlet UITextField *txtFirstname;
 @property (weak, nonatomic) IBOutlet UITextField *txtAge;
+@property (weak, nonatomic) IBOutlet UITextField *medicalRecNum;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSelector;
+
+
+
+@property (weak, nonatomic) IBOutlet UITextField *practitioner;
+@property (weak, nonatomic) IBOutlet UITextField *phone;
+
+@property (weak, nonatomic) IBOutlet UITextView *billingAdr;
+@property (weak, nonatomic) IBOutlet UITextView *shippingAdr;
+
+
+@property (nonatomic, strong) Patient *patient;
+
+- (IBAction)startLeftScan:(id)sender;
 
 - (IBAction)saveInfo:(id)sender;
+
+@property (strong, nonatomic) ViewController *scanViewController;
 
 @end

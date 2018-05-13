@@ -48,6 +48,7 @@
 		5839B60620A546B9009D6CEA /* sampledb.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5839B60520A546B9009D6CEA /* sampledb.sql */; };
 		5880374A20A8B1FF00CA0FC5 /* ViewPrevPatients.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5880374820A8B1FF00CA0FC5 /* ViewPrevPatients.mm */; };
 		5880374B20A8B1FF00CA0FC5 /* ViewPrevPatients.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5880374920A8B1FF00CA0FC5 /* ViewPrevPatients.xib */; };
+		5880374F20A8BB3D00CA0FC5 /* Patient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5880374E20A8BB3D00CA0FC5 /* Patient.mm */; };
 		58FFC24720A2D58B00083ADC /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 58FFC24620A2D58B00083ADC /* MainViewController.mm */; };
 		58FFC24C20A2D95300083ADC /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FFC24A20A2D95300083ADC /* MainViewController.xib */; };
 		58FFC24E20A3FD0C00083ADC /* ViewNewPatient.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FFC24D20A3FD0C00083ADC /* ViewNewPatient.xib */; };
@@ -117,6 +118,8 @@
 		5880374720A8B1FF00CA0FC5 /* ViewPrevPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPrevPatients.h; sourceTree = "<group>"; };
 		5880374820A8B1FF00CA0FC5 /* ViewPrevPatients.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewPrevPatients.mm; sourceTree = "<group>"; };
 		5880374920A8B1FF00CA0FC5 /* ViewPrevPatients.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPrevPatients.xib; sourceTree = "<group>"; };
+		5880374D20A8BB3D00CA0FC5 /* Patient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		5880374E20A8BB3D00CA0FC5 /* Patient.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Patient.mm; sourceTree = "<group>"; };
 		58FFC24520A2D53800083ADC /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		58FFC24620A2D58B00083ADC /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
 		58FFC24B20A2D95300083ADC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
@@ -215,6 +218,7 @@
 				5880374620A8B19100CA0FC5 /* PreviousPatients */,
 				5880374520A8AFAA00CA0FC5 /* Welcome */,
 				5880374420A8AF4E00CA0FC5 /* NewPatient */,
+				5880374C20A8BB0800CA0FC5 /* Patient */,
 				5839B60120A537C4009D6CEA /* Database */,
 				7EAD26B4198C07F600638C9C /* CustomUIKitStyles.h */,
 				7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */,
@@ -300,6 +304,15 @@
 				5880374920A8B1FF00CA0FC5 /* ViewPrevPatients.xib */,
 			);
 			path = PreviousPatients;
+			sourceTree = "<group>";
+		};
+		5880374C20A8BB0800CA0FC5 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				5880374D20A8BB3D00CA0FC5 /* Patient.h */,
+				5880374E20A8BB3D00CA0FC5 /* Patient.mm */,
+			);
+			path = Patient;
 			sourceTree = "<group>";
 		};
 		6F03CB601862832600518C22 /* Graphics */ = {
@@ -417,6 +430,7 @@
 				2D1295B0184370FE00E8C685 /* ViewController.mm in Sources */,
 				2D4DE5AC199BB90400F69F56 /* CustomShaders.mm in Sources */,
 				6F03CB961862832600518C22 /* main.m in Sources */,
+				5880374F20A8BB3D00CA0FC5 /* Patient.mm in Sources */,
 				7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */,
 				2AEF46231A1288B600CAF953 /* ViewController+Camera.mm in Sources */,
 				6F8BE660199EED0C00E10C10 /* CalibrationOverlay.mm in Sources */,

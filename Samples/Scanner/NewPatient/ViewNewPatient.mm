@@ -65,9 +65,6 @@
     
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    // or @"yyyy-MM-dd hh:mm:ss a" if you prefer the time with AM/PM
-    //NSLog(@"%@",[dateFormatter stringFromDate:[NSDate date]]);
-    
     _dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
     
     [self loadData];
@@ -76,6 +73,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [_patient clear];
 }
 
 - (void)appDidBecomeActive
@@ -85,6 +84,14 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)startLeftScan:(id)sender
+{
+    self.scanViewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+    
+    [self.navigationItem setTitle:@"Return"];
+    [self.navigationController pushViewController:self.scanViewController animated:YES];
 }
 
 - (IBAction)saveInfo:(id)sender
