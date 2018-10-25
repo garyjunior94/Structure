@@ -46,7 +46,7 @@
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60.0;
+    return 90.0;
 }
 
 
@@ -67,6 +67,8 @@
     NSInteger indexOfFirstname = [self.dbManager.arrColumnNames indexOfObject:@"firstname"];
     NSInteger indexOfLastname = [self.dbManager.arrColumnNames indexOfObject:@"lastname"];
     NSInteger indexOfAge = [self.dbManager.arrColumnNames indexOfObject:@"age"];
+    
+    cell.textLabel.font = [UIFont systemFontOfSize:25.0];
     
     // Set the loaded data to the appropriate cell labels.
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [[self.patientInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfFirstname], [[self.patientInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfLastname]];

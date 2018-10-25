@@ -211,9 +211,6 @@
                     <state key="normal" title="Finish &amp; Email">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="saveInfo:" destination="-1" eventType="touchUpInside" id="5ja-50-BCq"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.50794571639999997" green="0.4011498094" blue="0.170615077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
