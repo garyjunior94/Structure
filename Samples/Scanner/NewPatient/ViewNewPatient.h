@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSelector;
 @property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UITextView *shippingTextView;
+@property (weak, nonatomic) IBOutlet UITextView *billingTextView;
 
 
 

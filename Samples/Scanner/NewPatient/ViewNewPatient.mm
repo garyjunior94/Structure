@@ -71,6 +71,12 @@
     
     _myScrollView.contentSize =_contentView.frame.size; //sets ScrollView content size
     
+    self.shippingTextView.layer.borderWidth = 1.0f;
+    self.shippingTextView.layer.borderColor = [[UIColor grayColor] CGColor];
+ 
+    self.billingTextView.layer.borderWidth = 1.0f;
+    self.billingTextView.layer.borderColor = [[UIColor grayColor] CGColor];
+    
     [self loadData];
 }
 
