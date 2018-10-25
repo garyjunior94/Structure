@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtAge;
 @property (weak, nonatomic) IBOutlet UITextField *medicalRecNum;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSelector;
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 
 

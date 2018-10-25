@@ -67,6 +67,10 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     _dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
     
+    [_myScrollView addSubview:_contentView];//if the contentView is not already inside your scrollview in your xib/StoryBoard doc
+    
+    _myScrollView.contentSize =_contentView.frame.size; //sets ScrollView content size
+    
     [self loadData];
 }
 
