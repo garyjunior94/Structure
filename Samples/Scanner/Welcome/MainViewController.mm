@@ -35,11 +35,14 @@
     self.viewNewPatient = [[ViewNewPatient alloc] initWithNibName:@"ViewNewPatient" bundle:nil];
     
     self.viewPrevPatients = [[ViewPrevPatients alloc] initWithNibName:@"ViewPrevPatients" bundle:nil];
+    
+    [self.navigationItem setTitle:@""];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -64,13 +67,13 @@
     
     //WORKS
     //[self presentViewController:self.viewNewPatient animated:YES completion:nil];
-    [self.navigationItem setTitle:@"Save & Close"];
+    //[self.navigationItem setTitle:@"Save & Close"];
     [self.navigationController pushViewController:self.viewNewPatient animated:YES];
 }
 
 - (IBAction)prevPatientBtn:(id)sender
 {
-    [self.navigationItem setTitle:@"Back"];
+    //[self.navigationItem setTitle:@"Back"];
     [self.navigationController pushViewController:self.viewPrevPatients animated:YES];
 }
 
